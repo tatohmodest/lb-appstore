@@ -2,6 +2,7 @@ import "server-only";
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { connection } from "next/server";
 
 const COOKIE = "lb_studio";
 const MAX_AGE = 60 * 60 * 24 * 14; // 14 days
@@ -38,6 +39,8 @@ export async function destroySession() {
 }
 
 export async function isAdmin() {
+  // Session expiry compares against the clock, so this always runs per request.
+  await connection();
   const raw = (await cookies()).get(COOKIE)?.value;
   if (!raw) return false;
   const i = raw.lastIndexOf(".");

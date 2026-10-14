@@ -74,13 +74,14 @@ export function ScreenshotGallery({ shots, name }: { shots: string[]; name: stri
           <button
             key={src}
             onClick={() => setIndex(i)}
-            className="overflow-hidden rounded-[22px] bg-surface-2 elevated transition hover:brightness-95"
+            aria-label={`Open screenshot ${i + 1}`}
+            className="w-max overflow-hidden rounded-[22px] bg-surface-2 elevated transition hover:brightness-95"
           >
             <img
               src={src}
               alt={`${name} screenshot ${i + 1}`}
               loading={i < 2 ? "eager" : "lazy"}
-              className="h-[420px] w-auto max-w-none object-cover sm:h-[480px]"
+              className="block h-[min(440px,62dvh)] w-auto max-w-none sm:h-[480px]"
             />
           </button>
         ))}

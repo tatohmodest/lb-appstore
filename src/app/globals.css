@@ -122,6 +122,8 @@ body {
 .rail {
   display: grid;
   grid-auto-flow: column;
+  /* Items keep their own width and the rail scrolls; "auto" would squeeze them to fit */
+  grid-auto-columns: max-content;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
