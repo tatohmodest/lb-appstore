@@ -34,7 +34,7 @@ export function CategoryManager({ categories }: { categories: Cat[] }) {
       </div>
 
       {editing && (
-        <div className="mt-6 grid gap-5 rounded-3xl bg-surface p-6 elevated lg:grid-cols-[1fr_220px]">
+        <div className="mt-6 grid grid-cols-1 gap-5 rounded-3xl bg-surface p-6 elevated lg:grid-cols-[1fr_220px]">
           <div className="flex flex-col gap-4">
             <input value={editing.name} onChange={(e) => setEditing({ ...editing, name: e.target.value })} placeholder="Category name" className="rounded-xl bg-surface-2 px-4 py-2.5 outline-none focus:ring-2 focus:ring-brand/40" autoFocus />
             <div className="flex flex-wrap gap-1.5">

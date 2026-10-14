@@ -22,7 +22,7 @@ export default async function TodayPage() {
           <section className="flex flex-col gap-4 px-4 sm:px-8">
             <FeaturedCard app={hero} eyebrow={hero.editorsChoice ? "Editors' Choice" : "Featured"} large />
             {more.length > 0 && (
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {more.slice(0, 4).map((app) => (
                   <FeaturedCard key={app.id} app={app} eyebrow={app.editorsChoice ? "Editors' Choice" : "Spotlight"} />
                 ))}
@@ -104,7 +104,7 @@ function TrustRibbon() {
             <ArrowUpRight className="size-5" />
           </span>
         </div>
-        <div className="relative mt-6 grid gap-5 sm:grid-cols-3">
+        <div className="relative mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {items.map(({ icon: Icon, title, body, tint }) => (
             <div key={title}>
               <Icon className={`size-6 ${tint}`} />

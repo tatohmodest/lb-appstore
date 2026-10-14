@@ -29,7 +29,7 @@ export function SectionHeader({ title, eyebrow, href, className }: { title: Reac
 
 export function AppRow({ app, rank, divider = true }: { app: AppListItem; rank?: number; divider?: boolean }) {
   return (
-    <div className="group relative flex items-center gap-3.5 py-2.5">
+    <div className="group relative flex min-w-0 items-center gap-3.5 py-2.5">
       <AppIcon name={app.name} iconUrl={app.iconUrl} accentColor={app.accentColor} size={60} className="transition group-hover:scale-[1.03]" />
       {rank !== undefined && <span className="w-5 shrink-0 text-center text-lg font-semibold text-ink-2 tabular-nums">{rank}</span>}
       <div className={cn("flex min-w-0 flex-1 items-center gap-3 self-stretch", divider && "border-b border-line")}>

@@ -68,7 +68,7 @@ export function SearchClient({ categories, trending }: { categories: Cat[]; tren
             {trending.length > 0 && (
               <section>
                 <h2 className="flex items-center gap-2 text-lg font-semibold"><TrendingUp className="size-5 text-brand" /> Trending</h2>
-                <div className="mt-1 grid gap-x-8 md:grid-cols-2">
+                <div className="mt-1 grid grid-cols-1 gap-x-8 md:grid-cols-2">
                   {trending.map((a) => <AppRow key={a.id} app={a} />)}
                 </div>
               </section>
@@ -94,7 +94,7 @@ export function SearchClient({ categories, trending }: { categories: Cat[]; tren
             )}
           </>
         ) : shown.length ? (
-          <div className="grid gap-x-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
             {shown.map((a) => <AppRow key={a.id} app={a} />)}
           </div>
         ) : (

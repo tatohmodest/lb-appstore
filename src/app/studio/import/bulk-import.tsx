@@ -175,7 +175,7 @@ export function BulkImport({
 
       {rows.length > 0 && (
         <>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {rows.map((r) => (
               <ImportCard key={r.url} row={r} categories={categories} onChange={(p) => update(r.url, p)} />
             ))}

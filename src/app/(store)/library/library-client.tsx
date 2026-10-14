@@ -25,7 +25,7 @@ export function LibraryClient() {
   }
 
   return (
-    <ul className="grid gap-3 px-4 sm:grid-cols-2 sm:px-8 xl:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-3 px-4 sm:grid-cols-2 sm:px-8 xl:grid-cols-3">
       <AnimatePresence initial={false}>
         {apps.map((a) => (
           <motion.li

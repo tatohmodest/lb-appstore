@@ -13,7 +13,7 @@ export default function InstallPage() {
       <p className="max-w-2xl px-4 text-lg text-muted sm:px-8">
         This works for LBStore itself and for every app inside it. Pick your device:
       </p>
-      <div className="mt-8 grid gap-4 px-4 sm:px-8 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-4 px-4 sm:px-8 lg:grid-cols-3">
         <Guide icon={<Smartphone />} title="iPhone & iPad" tint="from-zinc-700 to-zinc-900">
           <S n={1} icon={<Share />}>Open the app in Safari and tap <b>Share</b>. On iOS 26, tap <Ellipsis className="inline size-4" /> first.</S>
           <S n={2} icon={<SquarePlus />}>Scroll down and tap <b>Add to Home Screen</b>.</S>

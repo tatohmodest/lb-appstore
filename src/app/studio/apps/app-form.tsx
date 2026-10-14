@@ -169,7 +169,7 @@ export function AppForm({ categories, app, initialUrl }: { categories: { id: str
         </p>
       )}
 
-      <div className="mt-6 grid gap-6 xl:grid-cols-[minmax(0,1fr)_420px]">
+      <div className="mt-6 grid grid-cols-1 gap-6 xl:grid-cols-[minmax(0,1fr)_420px]">
         <div className="flex flex-col gap-6">
           {/* Import */}
           <Card className="relative overflow-hidden">
@@ -193,7 +193,7 @@ export function AppForm({ categories, app, initialUrl }: { categories: { id: str
 
           <Card>
             <h2 className="font-semibold">Listing</h2>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <Field label="Name"><input value={f.name} onChange={(e) => set("name", e.target.value)} className={input} /></Field>
               <Field label="Slug" hint={`/apps/${f.slug || "…"}`}>
                 <input value={f.slug} onChange={(e) => (setSlugTouched(true), set("slug", slugify(e.target.value)))} className={input} />
@@ -221,7 +221,7 @@ export function AppForm({ categories, app, initialUrl }: { categories: { id: str
 
           <Card>
             <h2 className="font-semibold">Artwork</h2>
-            <div className="mt-4 grid gap-6 sm:grid-cols-[auto_1fr]">
+            <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-[auto_1fr]">
               <Field label="Icon" hint="Square, 512 px+">
                 <ImageDrop value={f.iconUrl} folder="icons" onChange={(v) => set("iconUrl", v)} onError={setError} className="size-32 rounded-[28px]" />
               </Field>
@@ -242,7 +242,7 @@ export function AppForm({ categories, app, initialUrl }: { categories: { id: str
 
           <Card>
             <h2 className="font-semibold">Release</h2>
-            <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
               <Field label="Version"><input value={f.version} onChange={(e) => set("version", e.target.value)} className={input} /></Field>
               <Field label="Download size (KB)" hint="0 = shows “Instant”"><input type="number" min={0} value={f.sizeKb} onChange={(e) => set("sizeKb", Number(e.target.value))} className={input} /></Field>
               <Field label="Age rating">
@@ -266,7 +266,7 @@ export function AppForm({ categories, app, initialUrl }: { categories: { id: str
                 );
               })}
             </div>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Toggle label="Published" sub="Visible on the store" on={f.published} set={(v) => set("published", v)} />
               <Toggle label="Works offline" sub="Shows the offline badge" on={f.offline} set={(v) => set("offline", v)} />
               <Toggle label="Featured on Today" sub="Big editorial card" on={f.featured} set={(v) => set("featured", v)} />
@@ -345,7 +345,7 @@ function HealthReport({ score, checks }: { score: number; checks: Check[] }) {
           <p className="text-sm text-muted">{score >= 85 ? "Ready to ship. Installs will feel native." : "Fix the red items for the smoothest install."}</p>
         </div>
       </div>
-      <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+      <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
         {checks.map((c) => (
           <li key={c.id} className="flex gap-2 text-sm" title={c.hint}>
             {c.ok === true ? <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-500" /> : c.ok === false ? <XCircle className="mt-0.5 size-4 shrink-0 text-red-500" /> : <CircleHelp className="mt-0.5 size-4 shrink-0 text-muted" />}

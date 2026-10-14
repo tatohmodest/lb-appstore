@@ -45,7 +45,7 @@ async function Category({ params }: { params: PageProps<"/categories/[slug]">["p
           {category.apps.length} app{category.apps.length === 1 ? "" : "s"}
         </p>
       </header>
-      <div className="mt-6 grid gap-x-8 px-4 sm:px-8 md:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-x-8 px-4 sm:px-8 md:grid-cols-2">
         {category.apps.map((app, i) => (
           <AppRow key={app.id} app={app} rank={i + 1} />
         ))}

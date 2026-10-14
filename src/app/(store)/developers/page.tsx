@@ -20,7 +20,7 @@ export default function DevelopersPage() {
   return (
     <>
       <PageTitle eyebrow="For the LoopingBinary team" title="Ship to LBStore" />
-      <div className="grid gap-6 px-4 sm:px-8 xl:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 px-4 sm:px-8 xl:grid-cols-2">
         <section className="rounded-[28px] bg-surface p-7 elevated">
           <Code2 className="size-7 text-brand" />
           <h2 className="mt-4 text-xl font-semibold">1. Add the LB Install SDK</h2>

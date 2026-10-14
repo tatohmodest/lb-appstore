@@ -66,7 +66,7 @@ async function DashboardContent() {
         <Kpi icon={Star} label="Average rating" value={totals._avg.ratingAvg ? totals._avg.ratingAvg.toFixed(2) : "–"} sub={`${formatCount(totals._sum.ratingCount ?? 0)} ratings`} />
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_300px]">
         <section className="rounded-3xl bg-surface p-6 elevated">
           <h2 className="font-semibold">Gets per day</h2>
           <GetsChart days={days} />
@@ -89,7 +89,7 @@ async function DashboardContent() {
         </section>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <section className="rounded-3xl bg-surface p-6 elevated">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">Top apps</h2>

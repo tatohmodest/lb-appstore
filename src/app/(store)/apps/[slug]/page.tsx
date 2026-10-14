@@ -148,7 +148,7 @@ async function AppDetail({ params }: { params: PageProps<"/apps/[slug]">["params
         </p>
       </section>
 
-      <div className="mt-10 grid gap-10 px-4 sm:px-8 xl:grid-cols-[minmax(0,1fr)_360px]">
+      <div className="mt-10 grid grid-cols-1 gap-10 px-4 sm:px-8 xl:grid-cols-[minmax(0,1fr)_360px]">
         <div className="flex min-w-0 flex-col gap-10">
           {app.description && (
             <section>

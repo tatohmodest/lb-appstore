@@ -11,7 +11,7 @@ export function ReviewModeration({ reviews }: { reviews: R[] }) {
   return (
     <section id="reviews" className="mt-10 scroll-mt-20">
       <h2 className="text-xl font-semibold">Reviews ({reviews.length})</h2>
-      <div className="mt-4 grid gap-3 md:grid-cols-2">
+      <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
         {reviews.map((r) => <ReviewItem key={r.id} r={r} />)}
         {!reviews.length && <p className="text-sm text-muted">No reviews yet.</p>}
       </div>

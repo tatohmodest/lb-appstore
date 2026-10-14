@@ -256,7 +256,7 @@ function DesktopGuide({ app, onOpen }: { app: InstallableApp; onOpen: () => void
   const [href] = useState(() => `${window.location.origin}/apps/${app.slug}?get=1`);
   const safari = /Safari/.test(navigator.userAgent) && !/Chrome|Chromium|Edg/.test(navigator.userAgent);
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div className="flex flex-col items-center rounded-3xl bg-surface-2 p-5 text-center">
         <div className="rounded-2xl bg-white p-3">
           <QRCodeSVG value={href} size={132} level="M" fgColor="#0a0a12" />

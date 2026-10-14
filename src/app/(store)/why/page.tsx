@@ -75,7 +75,7 @@ export default function WhyPage() {
       </section>
 
       {/* Three pillars */}
-      <section className="grid gap-4 px-4 sm:grid-cols-3 sm:px-8">
+      <section className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-3 sm:px-8">
         {[
           { icon: Zap, c: "from-amber-400 to-orange-500", t: "Instant", d: "Tap Get, add to Home Screen, done. No 200 MB download, no waiting on Wi-Fi." },
           { icon: ShieldCheck, c: "from-emerald-400 to-teal-500", t: "Safe by design", d: "Your browser's sandbox walls every app off from your files, contacts and other apps." },

@@ -37,7 +37,7 @@ export default async function AppsPage() {
       <section className="mt-12">
         <SectionHeader eyebrow="Ranked by installs" title="Top Charts" />
         {apps.length ? (
-          <div className="mt-2 grid gap-x-8 px-4 sm:px-8 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="mt-2 grid grid-cols-1 gap-x-8 px-4 sm:px-8 md:grid-cols-2 2xl:grid-cols-3">
             {apps.map((app, i) => (
               <AppRow key={app.id} app={app} rank={i + 1} />
             ))}
